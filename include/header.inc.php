@@ -9,7 +9,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 
 
-<nav class="navbar navbar-expand-lg w-100 navbar-dark bg-dark sticky-top wow bounceInDown">
+<nav class="navbar navbar-expand-lg w-100 navbar-dark bg-transparent fixed-top wow bounceInDown">
 	<!-- NAVBAR -->
 	<a class="navbar-brand" href="index.php">
 		<img src="images/Logo.png" width="30" height="30" class="d-inline-block align-top mr-2" alt="" loading="lazy">
