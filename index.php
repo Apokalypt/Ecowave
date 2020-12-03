@@ -16,8 +16,20 @@ require_once("include/functions.inc.php");
  */
 
 // This code initialize session value to default value
-if (!isset($_SESSION['lang'])) {
-	$_SESSION['lang'] = 'en';
+if (!empty($_GET['lang'])) {
+    $_SESSION['lang'] = $_GET['lang'];
+    
+    $url = $_SERVER['REQUEST_URI'];
+    if (count($_GET) == 1) {
+        $url = str_replace('?lang=' . $_GET['lang'], '', $url);
+    } else {
+        $url = str_replace('&lang=' . $_GET['lang'], '', $url);
+    }
+    header('Location: ' . $url);
+} else {
+    if (!isset($_SESSION['lang'])) {
+        $_SESSION['lang'] = 'fr';
+    }
 }
 
 
