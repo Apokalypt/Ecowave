@@ -51,9 +51,7 @@ if (!empty($_GET["page"])){
 <body class="h-100">
     <?php require_once("include/header.inc.php"); ?>
 
-	<div id="wrapper" class="wow bounceInRight">
-        <?php require_once("include/content.inc.php"); ?>
-	</div>
+	<?php require_once("include/content.inc.php"); ?>
 
 	<!-- Footer -->
 	<footer class="wow fadeIn sticky-footer fixed-bottom bg-white" data-wow-duration="1.3s" data-wow-delay="0.4s">
