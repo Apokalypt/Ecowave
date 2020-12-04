@@ -107,5 +107,10 @@
   "seConnecter" : {
     "fr" : "Se connecter",
     "en" : "Login"
+  },
+
+  "update" : {
+    "fr" : "Mettre à jour",
+    "en" : "Update"
   }
 }
