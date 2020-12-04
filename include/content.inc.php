@@ -20,6 +20,9 @@ switch ($page) {
     case EnumPages::Search:
         include('pages/search.inc.php');
         break;
+    case EnumPages::SessionCount:
+        include('pages/session_count.inc.php');
+        break;
     case EnumPages::Profile:
         include('pages/profile.inc.php');
         break;

@@ -6,4 +6,5 @@
     const Search = 'search';
     const Profile = 'profile';
     const ModifyProfile = 'modify-profile';
+    const SessionCount = 'session-count';
 }
