@@ -3,14 +3,14 @@
 This repository contains all resources for the **2020 edition** of the "Nuit de l'info" of the **Eye-Team**
 
 ## General information
-The app is available online at : 
+The app is available online at : http://146.59.248.50/
 
 ## How to use the app
 ###Languages
 Two languages are available for this app : french and english. To switch languages click on the dropdown menu you can find at the top right of the window and on the flag icon of the language you wish to choose.
 
 ###Sign In
-To sign in on the app and access all features you can use these pseudo and password : .
+To sign in on the app and access all features you can use these pseudo and password : root for the user and admin for the password
 
 ##Features
 ###Profile
