@@ -45,11 +45,11 @@ if (isConnected()) {
         <form action="" method="post">
             <div class="col-8 mx-auto mt-3">
                 <label for="email" class="button text-light display-5">Email</label>
-                <input class="w-100 rounded-pill" type="email" name="email" id="email">
+                <input class="w-100 rounded-pill" type="email" required name="email" id="email">
             </div>
             <div class="col-8 mx-auto mt-3">
                 <label for="password" class="button text-light display-5"><?php echo getString("password")?></label>
-                <input class="w-100 rounded-pill" type="password" name="password" id="password">
+                <input class="w-100 rounded-pill" type="password" required name="password" id="password">
             </div>
             <div class="col-8 mx-auto mt-4">
                 <input class="w-100 button rounded-pill" type="submit" name="connexion" id="connexion" value="<?php echo getString("connection")?>">

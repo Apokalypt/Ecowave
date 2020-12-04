@@ -27,9 +27,9 @@ class UserManager extends Manager {
         $query->bindValue(':user_pseudo', $user->getUserPseudo());
         $query->bindValue(':user_picture', $user->getUserPicture());
         $query->bindValue(':user_biography', $user->getUserBiography());
-        $query->bindValue(':mail', $user->getUserMail());
-        $query->bindValue(':password', $user->getUserPassword());
-        $query->execute();
+        $query->bindValue(':user_mail', $user->getUserMail());
+        $query->bindValue(':user_password', $user->getUserPassword());
+        return $query->execute();
     }
     
     
