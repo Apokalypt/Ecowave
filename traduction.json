@@ -1,0 +1,71 @@
+{
+  "surf" : {
+    "fr" : "SURFEZ",
+    "en" : "SURF"
+  },
+
+  "password" : {
+    "fr" : "Mot de Passe",
+    "en" : "Password"
+  },
+
+  "connection" : {
+    "fr" : "Connexion",
+    "en" : "Login"
+  },
+
+  "createAccount" : {
+    "fr" : "ou créé ton compte ici",
+    "en" : "or create your account here"
+  },
+
+  "confirmPassword" : {
+    "fr" : "Confirmer mot de passe",
+    "en" : "Confirm password"
+  },
+
+  "join" : {
+    "fr" : "Nous rejoindre",
+    "en" : "Join us"
+  },
+
+  "logIn" : {
+    "fr" : "ou connecte-toi ici",
+    "en" : "or login here"
+  },
+
+  "textHomeA" : {
+    "fr" : "Fondée en 1990, Surfrider Fondation France est devenue une référence dans le combat pour la protection de l’océan et de ses usagers, forte de la passion et de l’engagement de sa communauté sur le terrain.",
+    "en" : "Founded in 1990, Surfrider Fondation France has become a reference in the fight to protect the ocean and its users, backed by the passion and commitment of its community in the field."
+  },
+
+  "textHomeB" : {
+    "fr" : "Ecowave est une application de Surfrider  qui accompagne les surfeur·euse·s\ndans leur pratique de leur activité tout en remontant des données sur la pratique des surfeurs et leurs observations sur le milieu.\nLes surfeurs ont la possibilité de préparer une session de surf et d’estimer quand et où les vagues seront les meilleures.\n",
+    "en" : "Ecowave is an application of Surfrider that accompanies surfers\nin the practice of their activity while providing data on the practice of surfers and their observations of the environment.\nSurfers have the opportunity to prepare a surfing session and to estimate when and where the waves will be the best."
+  },
+
+  "joinCause" : {
+    "fr" : "Rallier notre cause",
+    "en" : "Join our cause"
+  },
+
+  "bySurfrider" : {
+    "fr" : "Ecowave une application by Surfrider",
+    "en" : "Ecowave an application by Surfrider"
+  },
+
+  "" : {
+    "fr" : "",
+    "en" : ""
+  },
+
+  "" : {
+    "fr" : "",
+    "en" : ""
+  },
+
+  "" : {
+    "fr" : "",
+    "en" : ""
+  }
+}

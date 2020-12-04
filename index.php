@@ -32,6 +32,8 @@ if (!empty($_GET['lang'])) {
     }
 }
 
+$_SESSION['leet'] = false;
+
 
 // Initialize value for $page
 if (!empty($_GET["page"])){
@@ -94,6 +96,51 @@ if (!empty($_GET["page"])){
 	<!-- Main js -->
 	<script src="js/main.js" ></script>
 </body>
+
+<script>
+	if (<?php echo $_SESSION['leet'] ?>) {
+        const allElem = document.getElementsByTagName("*");
+
+        for (let i=0; i < allElem.length; i++) {
+            let elem = allElem[i];
+            if (elem.children.length === 0) {
+                const associationNormalLeet = {
+                    "A": "4",
+                    "B": "8",
+                    "C": "(",
+                    "D": "[)",
+                    "E": "3",
+                    "F": "|=",
+                    "G": "6",
+                    "H": "#",
+                    "I": "1",
+                    "J": "_|",
+                    "K": "X",
+                    "L": "1",
+                    "M": "|v|",
+                    "N": "^/",
+                    "O": "0",
+                    "P": "|*",
+                    "Q": "(_,)",
+                    "R": "2",
+                    "S": "5",
+                    "T": "7",
+                    "U": "(_)",
+                    "V": "\\/",
+                    "W": "\\/\\/",
+                    "X": "><",
+                    "Y": "7",
+                    "Z": "≥"
+                };
+
+                for (const [key, value] of Object.entries(associationNormalLeet)) {
+                    allElem[i].textContent = allElem[i].textContent.replaceAll(key, value);
+                    allElem[i].textContent = allElem[i].textContent.replaceAll(key.toLowerCase(), value);
+                }
+            }
+        }
+	}
+</script>
 </html>
 
 
