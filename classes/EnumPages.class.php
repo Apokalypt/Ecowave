@@ -7,6 +7,6 @@
     const Profile = 'profile';
     const SpotDetails = 'spotdetails';
     const ModifyProfile = 'modify-profile';
-    const SessionCount = 'session-count';
+    const SessionCount = 'session_count';
     const SessionEnd = 'sessionend';
 }
