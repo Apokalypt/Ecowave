@@ -15,9 +15,18 @@ require_once("include/functions.inc.php");
  * }
  */
 
+if (!isset($_SESSION['leet'])) {
+    $_SESSION['leet'] = false;
+}
+
 // This code initialize session value to default value
 if (!empty($_GET['lang'])) {
-    $_SESSION['lang'] = $_GET['lang'];
+	if ($_GET['lang'] != 'leet') {
+        $_SESSION['lang'] = $_GET['lang'];
+        $_SESSION['leet'] = false;
+    } else {
+        $_SESSION['leet'] = !$_SESSION['leet'];
+    }
     
     $url = $_SERVER['REQUEST_URI'];
     if (count($_GET) == 1) {
@@ -32,7 +41,6 @@ if (!empty($_GET['lang'])) {
     }
 }
 
-$_SESSION['leet'] = false;
 
 // Initialize session value for account connection if value isn't initialize
 if (!isset($_SESSION['user_mail'])) {
