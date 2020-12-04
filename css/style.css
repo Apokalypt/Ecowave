@@ -70,6 +70,41 @@ i.star {
     background: url("../images/star.svg");
     background-size: 1rem;
 }
+i.personne1 {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/person-24px_1.svg");
+    background-size: 2rem;
+}
+i.personne2 {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/people-24px.svg");
+    background-size: 2rem;
+}
+i.personne3 {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/group_add-24px.svg");
+    background-size: 2rem;
+}
+i.beach {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/beach_access-24px.svg");
+    background-size: 2rem;
+}
+i.electric-scooter {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/electric_scooter-24px.svg");
+    background-size: 1rem;
+}
 #menu a {
     padding: 0 35px;
 }
