@@ -60,6 +60,15 @@ function getDataSwellHeightByAPI($file){
     return json_decode(file_get_contents($file),true)['data']['weather'][0]['hourly'][0]['swellHeight_m'];
 }
 
+function getDataWeatherByAPI($file){
+    if ($_SESSION['lang']=='fr'){
+        return json_decode(file_get_contents($file),true)['data']['weather'][0]['hourly'][0]['lang_fr'][0]['value'];
+    } else {
+        return json_decode(file_get_contents($file),true)['data']['weather'][0]['hourly'][0]['weatherDesc'][0]['value'];
+    }
+
+}
+
 
 
 /** This function return the string passed in parameter in UTF-8 encoding
