@@ -28,3 +28,9 @@
     background-image: url("../images/background.jpg");
     background-size: cover;
 }
+h2.title {
+    font-family: title, serif;
+    font-size: 3em;
+    line-height: 1;
+    letter-spacing: 0.5rem;
+}
