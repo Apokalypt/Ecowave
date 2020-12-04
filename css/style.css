@@ -59,10 +59,10 @@ i.search {
 }
 i.arrow-right {
     display: block;
-    width: 1rem;
-    height: 1rem;
+    width: 4rem;
+    height: 4rem;
     background: url("../images/arrow-right.svg");
-    background-size: 1rem;
+    background-size: 4rem;
 }
 i.star {
     display: block;

@@ -69,7 +69,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
             </aside>
         </section>
         <a href="?page=session_count">
-            <div class="rond green m-auto start">
+            <div class="rond green mx-auto p-2 start">
                 <i class="arrow-right"></i>
             </div>
         </a>
