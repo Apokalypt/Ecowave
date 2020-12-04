@@ -9,7 +9,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 
 
-<nav class="navbar navbar-expand-lg w-100 navbar-dark bg-transparent fixed-top wow bounceInDown justify-content-end">
+<nav class="navbar navbar-expand-lg w-100 navbar-dark bg-transparent fixed-top justify-content-end">
 
 
 	<!--

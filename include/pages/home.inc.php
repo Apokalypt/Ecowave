@@ -16,11 +16,14 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 	</div>
 </div>
 
-<div class="col-10 m-auto">
+<div class="col-10 m-auto h-100">
 	<div class="col-10 m-auto">
+		<div class="row mt-4 wow bounceInDown">
+			<h1 class="w-100 text-center button display-4">Rallier notre cause !</h1>
+			<h5 class="w-100 text-center font-weight-normal" style="font-family: 'Lucida Sans',serif">Ecowave une application by Surfrider</h5>
+		</div>
 		
-		
-		<div class="row pt-5">
+		<div class="row mt-5 wow bounceInLeft">
 			<img class="col-4" src="images/surfer1.jpg">
 			<p class="ml-3 col-7" style="font-family: 'Lucida Sans',serif">
 				Fondée en 1990, Surfrider Fondation France est devenue une référence dans le combat pour la protection de
@@ -28,7 +31,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 			</p>
 		</div>
 
-		<div class="row py-5">
+		<div class="row mt-5 wow bounceInRight">
 			<p class="mr-3 col-7" style="font-family: 'Lucida Sans',serif">
 				Fondée en 1990, Surfrider Fondation France est devenue une référence dans le combat pour la protection de
 				l’océan et de ses usagers, forte de la passion et de l’engagement de sa communauté sur le terrain.
