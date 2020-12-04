@@ -74,7 +74,7 @@
     "en" : "Country"
   },
 
-  "Profil" : {
+  "profil" : {
     "fr" : "Profil",
     "en" : "Profile"
   },
@@ -102,5 +102,10 @@
   "accueil" : {
     "fr" : "Accueil",
     "en" : "Home"
+  },
+
+  "seConnecter" : {
+    "fr" : "Se connecter",
+    "en" : "Login"
   }
 }
