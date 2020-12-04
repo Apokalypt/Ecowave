@@ -56,6 +56,20 @@ i.search {
     background: url("../images/search.svg");
     background-size: 1rem;
 }
+i.arrow-right {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/arrow-right.svg");
+    background-size: 1rem;
+}
+i.star {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/star.svg");
+    background-size: 1rem;
+}
 #menu a {
     padding: 0 35px;
 }
