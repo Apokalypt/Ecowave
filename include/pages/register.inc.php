@@ -3,6 +3,34 @@
 if (session_status() !== PHP_SESSION_ACTIVE) {
     header('Location:../../?page=error404');
     exit();
+}
+
+if (isConnected()) {
+    header('Location:?page=' . EnumPages::Home);
+    exit();
+} else {
+    if (empty($_GET['action'])) {
+        $_GET['action'] = 'home';
+    }
+    
+    if (!oneIsEmpty($_GET, 'password', 'email') && isEmail($_GET['email'])) {
+    	if ((new UserManager(new MyPDO()))->addUser($_GET['email'], encryptStringNoDecrypt($_GET['password']))) {
+            $_SESSION['user_mail'] = $_GET['email'];
+            $_SESSION['user_password'] = $_GET['password'];
+        
+            switch ($_GET['action']) {
+                case 'surf' :
+                    header('Location:?page=' . EnumPages::Search);
+                    exit();
+                case 'profil' :
+                    header('Location:?page=' . EnumPages::Profile);
+                    exit();
+                default :
+                    header('Location:?page=' . EnumPages::Home);
+                    exit();
+            }
+		}
+    }
 } ?>
 <div class="d-flex h-100 background">
     <div class="col-sm-10 col-md-8 col-lg-6 m-auto text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">

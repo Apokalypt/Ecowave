@@ -11,6 +11,15 @@ class UserManager extends Manager {
         return $userData;
     }
     
+    public function addUser($user_mail, $user_password) {
+        $query = $this->db->prepare("INSERT INTO user (user_pseudo, user_picture, fk_country_id, user_biography, user_mail, user_password) VALUES ('', '', '', '', :mail, :password)");
+        $query->bindValue(':mail', $user_mail);
+        $query->bindValue(':password', $user_password);
+        $query->execute();
+    
+        return $this->db->lastInsertId();
+    }
+    
     
     public function connect($user_mail, $user_password) {
         $querySQL = "SELECT user_id, user_pseudo, user_picture, fk_country_id, user_biography, user_mail, user_password FROM user WHERE user_mail = '$user_mail' AND user_password = '$user_password'";
