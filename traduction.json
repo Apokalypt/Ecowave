@@ -54,18 +54,38 @@
     "en" : "Ecowave an application by Surfrider"
   },
 
-  "" : {
-    "fr" : "",
-    "en" : ""
+  "maree" : {
+    "fr" : "Marée",
+    "en" : "Tide"
   },
 
-  "" : {
-    "fr" : "",
-    "en" : ""
+  "vent" : {
+    "fr" : "Vent",
+    "en" : "Wind"
   },
 
-  "" : {
-    "fr" : "",
-    "en" : ""
+  "houle" : {
+    "fr" : "Houle",
+    "en" : "Swell"
+  },
+
+  "pays" : {
+    "fr" : "Pays",
+    "en" : "Country"
+  },
+
+  "Profil" : {
+    "fr" : "Profil",
+    "en" : "Profile"
+  },
+
+  "editProfil" : {
+    "fr" : "Modifier profil",
+    "en" : "Edit profile"
+  },
+
+  "noDescription" : {
+    "fr" : "Aucune description",
+    "en" : "No description"
   }
 }
