@@ -42,7 +42,20 @@ h2.title {
     background-color: white;
     width: 100vw;
 }
-
+i.cloudy {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: url("../images/cloudy.svg");
+    background-size: 4rem;
+}
+i.search {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/search.svg");
+    background-size: 1rem;
+}
 #menu a {
     padding: 0 35px;
 }
@@ -56,6 +69,11 @@ h2.title {
 
 span {
     font-size: 0.75rem;
+}
+
+.spot-preview {
+    border: 2px solid black;
+    background: white;
 }
 
 
