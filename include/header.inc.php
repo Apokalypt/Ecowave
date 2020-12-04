@@ -44,6 +44,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 							<img id="fr" src="images/France_Flag.svg" height="30">
                         <?php } ?>
 					</button>
+
+					<button class="btn btn-link pt-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="onClick2()">
+						<img id="en" src="images/hacker.svg" height="30">
+					</button>
 				</div>
 			</div>
 		</div>
@@ -63,5 +67,14 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 window.open(currentUrl + "?lang=" + lang, "_self");
             }
 		}
+		
+		function onClick2() {
+            const currentUrl = window.location.href;
+            if (currentUrl.includes("?")) {
+                window.open(currentUrl + "&lang=leet", "_self");
+            } else {
+                window.open(currentUrl + "?lang=leet", "_self");
+            }
+        }
 	</script>
 </nav>
