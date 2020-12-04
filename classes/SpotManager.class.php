@@ -54,19 +54,22 @@ class SpotManager extends Manager {
     
     
     function getSpotByRegion(Region $region) {
+        $listSpot = array();
+        
         $querySQL = "SELECT spot_id, spot_name, spot_city, spot_details, spot_department, spot_region, fk_user_id FROM spot WHERE spot_region = :region_id";
         $query = $this->db->prepare($querySQL);
         $query->bindValue(':region_id', $region->getRegionId());
         $query->execute();
-        
-        $spotData = $query->fetch(PDO::FETCH_ASSOC);
-        if ($spotData !== false) {
+    
+        while ($spotData = $query->fetch()) {
             $spotData = $this->convertDBArrayToRightArray($spotData);
-            
-            return new Spot($spotData);
-        } else {
-            return false;
+        
+            $spot = new Spot($spotData);
+            $listSpot[] = $spot;
         }
+    
+        $query->closeCursor();
+        return $listSpot;
     }
     
     

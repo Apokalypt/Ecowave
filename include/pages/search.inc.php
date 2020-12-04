@@ -31,7 +31,7 @@ if (!empty($_POST['pays'])) {
                             <label class="col-12 button display-5 text-light" for="pays">Pays</label>
                             <select class="w-100" name="pays" id="pays" onchange="this.form.submit()">
 								<?php foreach ($listPays as $value) { ?>
-									<option value="<?php echo $value->getCountryId() ?>"><?php if ($_SESSION['lang'] == 'en') {echo $value->getEnCountryName();} else {echo $value->getFrCountryName();} ?></option>
+									<option <?php if (!empty($_POST['pays']) && $_POST['pays'] == $value->getCountryId()) echo 'selected'?> value="<?php echo $value->getCountryId() ?>"><?php if ($_SESSION['lang'] == 'en') {echo $value->getEnCountryName();} else {echo $value->getFrCountryName();} ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -39,7 +39,7 @@ if (!empty($_POST['pays'])) {
                             <label class="col-12 button display-5 text-light"  for="region">Region</label>
                             <select class="w-100" name="region" id="region" <?php if (empty($_POST['pays'])) echo 'disabled' ?> onchange="this.form.submit()">
                                 <?php foreach ($listRegion as $value) { ?>
-									<option value="<?php echo $value->getRegionId() ?>"><?php echo $value->getRegionName() ?></option>
+									<option <?php if (!empty($_POST['region']) && $_POST['region'] == $value->getRegionId()) echo 'selected'?> value="<?php echo $value->getRegionId() ?>"><?php echo $value->getRegionName() ?></option>
                                 <?php } ?>
                             </select>
                         </div>

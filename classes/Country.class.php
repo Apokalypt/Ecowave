@@ -1,7 +1,7 @@
 <?php
 
 
-class Country extends Object {
+class Country {
     private $country_id;
     private $country_short;
     private $en_country_name;
