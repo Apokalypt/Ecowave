@@ -8,6 +8,7 @@ $id = $_GET["id"];
 $manager = new SpotManager(new MyPDO());
 $sessionManager = new SessionManager(new MyPDO());
 $spot = $manager->getSpotById($id);
+$api = "http://api.worldweatheronline.com/premium/v1/marine.ashx?key=06e2aceb18594188b23232150200312&q=" . $spot->getSpotDetails() . "&format=json&lang=fr"
 ?>
 
 <div class="d-flex h-100 background">
@@ -47,15 +48,15 @@ $spot = $manager->getSpotById($id);
                     </tr>
                     <tr>
                         <td class="text-left"><h5>Marée</h5></td>
-                        <td class="pl-4"><p>70</p></td>
+                        <td class="pl-4"><p><?php echo getDataTideHeightByAPI($api) ?></p></td>
                     </tr>
                     <tr>
                         <td class="text-left"><h5>Vent</h5></td>
-                        <td class="pl-5"><p>2 km/h NO</p></td>
+                        <td class="pl-5"><p><?php echo getDataWindSpeedByAPI($api) . ' ' .getDataWindDirectionByAPI($api) ?>/p></td>
                     </tr>
                     <tr>
                         <td class="text-left"><h5>Houle</h5></td>
-                        <td class="pl-4"><p>2.2</p></td>
+                        <td class="pl-4"><p><?php echo getDataSwellHeightByAPI($api) . ' ' . getDataSwellDirectionByAPI($api) ?></p></td>
                     </tr>
                 </table>
             </div>
