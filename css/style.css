@@ -10,13 +10,17 @@
     font-family: title;
     src: url('../fonts/titleFont.ttf');
 }
-
 .title {
-    overflow: hidden;
     font-family: title, serif;
-    font-size: 9rem;
     line-height: 1;
+    font-size: 4rem;
+    overflow: hidden;
+}
+h1.title {
     letter-spacing: 0.9rem;
+}
+h2.title {
+    letter-spacing: 0;
 }
 .normal {
     font-family: normal, serif;
@@ -29,15 +33,12 @@
     background-image: url("../images/background.jpg");
     background-size: cover;
 }
-h2.title {
-    font-family: title, serif;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: 0;
-}
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 600px) {
     h1.title {
-        font-size: 4rem;
+        font-size: 9rem;
+    }
+    h2.title {
+        font-size: 7rem;
     }
 }

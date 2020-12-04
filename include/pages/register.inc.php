@@ -7,7 +7,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 <div class="d-flex h-100 background">
     <div class="col-12 col-md-10 m-auto text-center">
         <img src="images/Logo.png" alt="Logo" class="col-5 col-md-4">
-        <h1 class="title mb-0 text-light">ECOWAVE</h1>
+        <h2 class="title mb-0 text-light">ECOWAVE</h2>
         <form action="??" method="post">
             <div>
                 <label for="pseudo" class="button display-5 text-light">Pseudo</label>

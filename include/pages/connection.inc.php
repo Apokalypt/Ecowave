@@ -7,7 +7,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 <div class="d-flex h-100 background">
     <div class="col-sm-10 col-md-8 col-lg-6 m-auto text-center w-100 wrap justify-content-center align-self-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">
-        <img class="d-flex col-6 m-auto" src="images/Logo.png" alt="logo">
+        <img src="images/Logo.png" alt="Logo" class="col-5 col-md-4">
         <h2 class="col-12 text-center title mb-0 text-light">ECOWAVE</h2>
         <form action="" method="post">
             <div class="col-8 m-auto">
