@@ -48,6 +48,7 @@ i.cloudy {
     height: 4rem;
     background: url("../images/cloudy.svg");
     background-size: 4rem;
+    background-repeat: no-repeat;
 }
 i.search {
     display: block;
@@ -99,10 +100,31 @@ span {
     background-color: red;
 }
 
+.green{
+    background-color: #acee47;
+}
+
+.start{
+    padding:10%;
+}
+@media screen and (min-width: 700px){
+    .start{
+        padding:5%;
+    }
+}
+
+
 .stop {
     padding-top: 50%;
     transform: translateY(-27%);
     width: 50px;
+}
+
+.spot-details-panel {
+    max-height: 20rem;
+}
+aside.spot-details-panel {
+    overflow-y:scroll;
 }
 
 

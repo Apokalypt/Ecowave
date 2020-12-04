@@ -5,6 +5,7 @@
     const Register = 'register';
     const Search = 'search';
     const Profile = 'profile';
+    const SpotDetails = 'spotdetails';
     const ModifyProfile = 'modify-profile';
     const SessionCount = 'session-count';
 }

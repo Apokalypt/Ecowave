@@ -29,6 +29,9 @@ switch ($page) {
     case EnumPages::ModifyProfile:
         include('pages/modify_profile.inc.php');
         break;
+    case EnumPages::SpotDetails:
+        include_once ('pages/spotdetails.inc.php');
+        break;
     case EnumPages::Error404:
         include_once ('pages/error404.inc.php');
         break;
