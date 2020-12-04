@@ -12,32 +12,16 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
             <h2 class="title mb-0 text-light">ECOWAVE</h2>
         </div>
         <form class="spot-preview rounded" action="" method="post">
-            <h2 class="mx-auto">Lacanau plage</h2>
+            <h2 class="button mx-auto">Lacanau plage</h2>
             <div class="row mx-3">
                 <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-2"></div>
-                        <div class="col-3"><i class="personne1 mx-auto"></i><p>1-10</p></div>
-                        <div class="col-3"><i class="personne2 mx-auto"></i><p>10-50</p></div>
-                        <div class="col-3"><i class="personne3 mx-auto"></i><p>50+</p></div>
-                    </div>
                     <div class="col-12">
-                        <div class="col-3"><i class=""></i></div>
-                        <div class="col-3"><i class=""></i></div>
-                        <div class="col-3"><i class=""></i></div>
-                        <div class="col-3"><i class=""></i></div>
-                    </div>
-                    <div class="col-12">
-                        <div class="col-3"><i class=""></i></div>
-                        <div class="col-3"><i class=""></i></div>
-                        <div class="col-3"><i class=""></i></div>
-                        <div class="col-3"><i class=""></i></div>
-                    </div>
-                    <div class="col-12">
-                        <div class="col-3"><i class=""></i></div>
-                        <div class="col-3"><i class=""></i></div>
-                        <div class="col-3"><i class=""></i></div>
-                        <div class="col-3"><i class=""></i></div>
+                        <label for="frequentation" class="col-5">Fréquentation : </label>
+                        <select name="frequentation" id="frequentation" class="col-6 w-100 rounded">
+                            <option value="1">1 - 10</option>
+                            <option value="2">10 - 50</option>
+                            <option value="3">50+</option>
+                        </select>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -55,6 +39,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                     </div>
                 </div>
             </div>
+            <input type="submit" value="Valider" class="button text-dark rounded-pill p-2">
         </form>
     </div>
 </div>
