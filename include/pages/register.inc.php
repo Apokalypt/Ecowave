@@ -39,19 +39,19 @@ if (isConnected()) {
         <form action="" method="post">
             <div class="col-8 mx-auto mt-3">
                 <label for="pseudo" class="button display-5 text-light">Pseudo</label>
-                <input type="text" name="pseudo" id="pseudo" class="w-100 rounded-pill">
+                <input type="text" required name="pseudo" id="pseudo" class="w-100 rounded-pill">
             </div>
             <div class="col-8 mx-auto mt-3">
                 <label for="email" class="button display-5 text-light">Email</label>
-                <input type="text" name="email" id="email" class="w-100 rounded-pill">
+                <input type="text" required name="email" id="email" class="w-100 rounded-pill">
             </div>
             <div class="col-8 mx-auto mt-3">
                 <label for="mdp" class="button display-5 text-light">Mot de passe</label>
-                <input type="password" name="mdp" id="mdp" class="w-100 rounded-pill">
+                <input type="password" required name="mdp" id="mdp" class="w-100 rounded-pill">
             </div>
             <div class="col-8 mx-auto mt-3">
                 <label for="mdp_confirm" class="button display-5 text-light">Confirmation mot de passe</label>
-                <input type="password" name="mdp_confirm" id="mdp_confirm" class="w-100 rounded-pill">
+                <input type="password" required name="mdp_confirm" id="mdp_confirm" class="w-100 rounded-pill">
             </div>
             <div class="col-8 mx-auto mt-4">
                 <input value="Nous rejoindre" class="button w-100 rounded-pill" type="submit" name="connexion" id="connexion">

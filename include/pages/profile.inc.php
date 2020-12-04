@@ -18,7 +18,7 @@ if (!isConnected()) {
 			<img src="images/Logo.png" alt="Logo" class="col-5 col-md-4">
 			<h2 class="title mb-0 text-light">ECOWAVE</h2>
 			<div class="rond m-auto"></div>
-			<h2 class="button text-light"><?php echo $account->getUserPseudo() == '' ?  '<az>' . $account->getUserMail() . '</az>' : '<az>' . $account->getUserPseudo() . '</az>' ?> <span>(<a href="?page=<?php echo EnumPages::ModifyProfile . "&id=" . $account->getUserId() ?>" class="text display-6 text-light">Modifier profil</a>)</span></h2>
+			<h2 class="button text-light"><?php echo $account->getUserPseudo() == '' ?  '<az>' . $account->getUserMail() . '</az>' : '<az>' . $account->getUserPseudo() . '</az>' ?> <span>(<a href="?page=<?php echo EnumPages::ModifyProfile . "&id=" . $account->getUserId() . "&action=profil" ?>" class="text display-6 text-light">Modifier profil</a>)</span></h2>
 			<h2 class="button text-light">Description</h2>
 			<p class="text text-light"><?php echo $account->getUserBiography() == '' ?  '<i>Aucune description</i>' : '<az>' . $account->getUserBiography() . '</az>' ?></p>
 			<!--

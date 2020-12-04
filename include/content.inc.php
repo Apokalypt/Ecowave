@@ -32,6 +32,9 @@ switch ($page) {
     case EnumPages::SpotDetails:
         include_once ('pages/spotdetails.inc.php');
         break;
+    case EnumPages::SessionEnd:
+        include_once ('pages/sessionend.inc.php');
+        break;
     case EnumPages::Error404:
         include_once ('pages/error404.inc.php');
         break;

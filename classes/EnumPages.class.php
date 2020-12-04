@@ -8,4 +8,5 @@
     const SpotDetails = 'spotdetails';
     const ModifyProfile = 'modify-profile';
     const SessionCount = 'session-count';
+    const SessionEnd = 'sessionend';
 }
