@@ -34,11 +34,26 @@ class RegionManager extends Manager {
         $querySQL = "SELECT region_id, region_name, fk_country_id FROM region WHERE region_id = $region_id";
         $query = $this->db->prepare($querySQL);
         $query->execute();
-    
+        
         $regionData = $query->fetch(PDO::FETCH_ASSOC);
         if ($regionData !== false) {
             $regionData = $this->convertDBArrayToRightArray($regionData);
+            
+            return new Region($regionData);
+        } else {
+            return false;
+        }
+    }
     
+    function getRegionByCountryId($country_id) {
+        $querySQL = "SELECT region_id, region_name, fk_country_id FROM region WHERE fk_country_id = $country_id";
+        $query = $this->db->prepare($querySQL);
+        $query->execute();
+        
+        $regionData = $query->fetch(PDO::FETCH_ASSOC);
+        if ($regionData !== false) {
+            $regionData = $this->convertDBArrayToRightArray($regionData);
+            
             return new Region($regionData);
         } else {
             return false;
