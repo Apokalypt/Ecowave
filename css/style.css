@@ -11,6 +11,22 @@
     src: url('../fonts/titleFont.ttf');
 }
 
+
+
+body {
+    overflow-x:hidden;
+    overflow-y:overlay; /* manage scrollbar content overflow settings */
+}
+body::-webkit-scrollbar {
+    width:auto; /* manage scrollbar width here */
+}
+body::-webkit-scrollbar * {
+    background:transparent; /* manage scrollbar background color here */
+}
+body::-webkit-scrollbar-thumb {
+    background:rgba(180,180,180,0.1) !important; /* manage scrollbar thumb background color here */
+}
+
 .title {
     overflow: hidden;
     font-family: title, serif;
