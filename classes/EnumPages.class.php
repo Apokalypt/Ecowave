@@ -3,5 +3,5 @@
 	const Home = 'home';
 	const Connection = 'connection';
     const Register = 'register';
-
+    const Search = 'search';
 }

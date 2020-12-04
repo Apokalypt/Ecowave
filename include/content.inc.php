@@ -17,6 +17,9 @@ switch ($page) {
     case EnumPages::Register:
         include('pages/register.inc.php');
         break;
+    case EnumPages::Search:
+        include('pages/search.inc.php');
+        break;
     case EnumPages::Error404:
         include_once ('pages/error404.inc.php');
         break;

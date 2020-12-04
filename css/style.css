@@ -33,6 +33,13 @@ h2.title {
     background-image: url("../images/background.jpg");
     background-size: cover;
 }
+i.search {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/search.svg");
+    background-size: 1rem;
+}
 
 @media screen and (min-width: 600px) {
     h1.title {
