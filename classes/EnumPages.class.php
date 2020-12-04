@@ -4,4 +4,5 @@
 	const Connection = 'connection';
     const Register = 'register';
     const Search = 'search';
+    const Profile = 'profile';
 }
