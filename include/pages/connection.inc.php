@@ -18,10 +18,10 @@ if (isConnected()) {
         $_GET['action'] = 'home';
 	}
 	
-	if (!oneIsEmpty($_GET, 'passwd', 'email')) {
-		if ((new UserManager(new MyPDO()))->connect($_GET['email'], encryptStringNoDecrypt($_GET['passwd']))) {
+	if (!oneIsEmpty($_GET, 'password', 'email')) {
+		if ((new UserManager(new MyPDO()))->connect($_GET['email'], encryptStringNoDecrypt($_GET['password']))) {
             $_SESSION['user_mail'] = $_GET['email'];
-            $_SESSION['user_password'] = $_GET['passwd'];
+            $_SESSION['user_password'] = $_GET['password'];
 			
             switch ($_GET['action']) {
                 case 'surf' :
