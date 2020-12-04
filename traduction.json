@@ -87,5 +87,20 @@
   "noDescription" : {
     "fr" : "Aucune description",
     "en" : "No description"
+  },
+
+  "qualiteEau" : {
+    "fr" : "Qualité de l'eau",
+    "en" : "Water quality"
+  },
+
+  "qualiteSand" : {
+    "fr" : "Qualité de la plage",
+    "en" : "Quality of the beach"
+  },
+
+  "accueil" : {
+    "fr" : "Accueil",
+    "en" : "Home"
   }
 }
