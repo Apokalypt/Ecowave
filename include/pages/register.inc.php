@@ -5,8 +5,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     exit();
 } ?>
 <div class="d-flex h-100 background">
-    <div class="col-10 m-auto text-center">
-        <img src="images/Logo.png" alt="Logo" class="col-5">
+    <div class="col-12 col-md-10 m-auto text-center">
+        <img src="images/Logo.png" alt="Logo" class="col-5 col-md-4">
         <h1 class="title mb-0 text-light">ECOWAVE</h1>
         <form action="??" method="post">
             <div>
@@ -35,6 +35,6 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
             <br>
             <input type="submit" value="Nous rejoindre" class="button col-7 rounded-pill">
         </form>
-        <a href="index.php?page=connection" class="button text-light">ou connecte-toi ici</a>
+        <a href="index.php?page=connection" class="button text-dark">ou connecte-toi ici</a>
     </div>
 </div>
