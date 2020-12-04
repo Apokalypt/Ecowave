@@ -30,7 +30,7 @@ function getTitle() {
  * @return mixed
  */
 function getString($tag) {
-    return json_decode(file_get_contents('string.json'), true)[$tag][$_SESSION['lang']];
+    return json_decode(file_get_contents('traduction.json'), true)[$tag][$_SESSION['lang']];
 }
 
 

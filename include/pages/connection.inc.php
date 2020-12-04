@@ -15,13 +15,13 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 <input class="w-100 rounded-pill" type="email" name="email" id="email">
             </div>
             <div class="col-8 mx-auto mt-3">
-                <label for="password" class="button text-light display-5">Mot de passe</label>
+                <label for="password" class="button text-light display-5"><?php echo getString("password")?></label>
                 <input class="w-100 rounded-pill" type="password" name="password" id="password">
             </div>
             <div class="col-8 mx-auto mt-4">
-                <input class="w-100 button rounded-pill" type="submit" name="connexion" id="connexion" value="Connexion">
+                <input class="w-100 button rounded-pill" type="submit" name="connexion" id="connexion" value="<?php echo getString("connection")?>">
             </div>
-            <a href="index.php?page=register" class="button text-light">ou créé ton compte ici</a>
+            <a href="index.php?page=register" class="button text-light"><?php echo getString("createAccount")?></a>
         </form>
     </div>
 </div>
