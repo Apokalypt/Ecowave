@@ -4,7 +4,6 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     header('Location:../../?page=error404');
     exit();
 } ?>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 <div class="d-flex h-100 background">
 	<div class="w-100 wrap justify-content-center align-self-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">
@@ -13,6 +12,28 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 		
 		<div class="row justify-content-center m-0">
 			<a class="button btn btn-primary mt-5 rounded-pill px-4 py-2" role="button">SURFEZ !</a>
+		</div>
+	</div>
+</div>
+
+<div class="col-10 m-auto">
+	<div class="col-10 m-auto">
+		
+		
+		<div class="row pt-5">
+			<img class="col-4" src="images/surfer1.jpg">
+			<p class="ml-3 col-7" style="font-family: 'Lucida Sans',serif">
+				Fondée en 1990, Surfrider Fondation France est devenue une référence dans le combat pour la protection de
+				l’océan et de ses usagers, forte de la passion et de l’engagement de sa communauté sur le terrain.
+			</p>
+		</div>
+
+		<div class="row py-5">
+			<p class="mr-3 col-7" style="font-family: 'Lucida Sans',serif">
+				Fondée en 1990, Surfrider Fondation France est devenue une référence dans le combat pour la protection de
+				l’océan et de ses usagers, forte de la passion et de l’engagement de sa communauté sur le terrain.
+			</p>
+			<img class="col-4" src="images/surfer2.jpg">
 		</div>
 	</div>
 </div>
