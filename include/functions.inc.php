@@ -34,6 +34,34 @@ function getString($tag) {
 }
 
 
+function getDataTideHeightByAPI($file){
+    return json_decode(file_get_contents($file),true)['data']['weather'][0]['tides'][0]['tide_data'][0]['tideHeight_mt'];
+}
+
+function getDataTideDateTimeByAPI($file){
+    $dateTime = json_decode(file_get_contents($file),true)['data']['weather'][0]['tides'][0]['tide_data'][0]['tideDateTime'];
+    $expl= explode(" ",$dateTime);
+    return $expl[1];
+}
+
+function getDataWindSpeedByAPI($file){
+    return json_decode(file_get_contents($file),true)['data']['weather'][0]['hourly'][0]['windspeedKmph'];
+}
+
+function getDataWindDirectionByAPI($file){
+    return json_decode(file_get_contents($file),true)['data']['weather'][0]['hourly'][0]['winddir16Point'];
+}
+
+function getDataSwellDirectionByAPI($file){
+    return json_decode(file_get_contents($file),true)['data']['weather'][0]['hourly'][0]['swellDir'];
+}
+
+function getDataSwellHeightByAPI($file){
+    return json_decode(file_get_contents($file),true)['data']['weather'][0]['hourly'][0]['swellHeight_m'];
+}
+
+
+
 /** This function return the string passed in parameter in UTF-8 encoding
  *
  * @param $string
