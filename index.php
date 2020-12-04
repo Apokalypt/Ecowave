@@ -34,6 +34,19 @@ if (!empty($_GET['lang'])) {
 
 $_SESSION['leet'] = false;
 
+// Initialize session value for account connection if value isn't initialize
+if (!isset($_SESSION['user_mail'])) {
+    $_SESSION['user_mail'] = '';
+}
+if (!isset($_SESSION['user_password'])) {
+    $_SESSION['user_password'] = '';
+}
+$account = (new UserManager(new MyPDO()))->connect($_SESSION['user_mail'], encryptStringNoDecrypt($_SESSION['user_password']));
+
+function isConnected() {
+    global $account;
+	return $account == true;
+}
 
 // Initialize value for $page
 if (!empty($_GET["page"])){
