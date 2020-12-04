@@ -7,7 +7,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 <div class="d-flex h-100 background">
 	<div class="w-100 wrap justify-content-center align-self-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">
-		<h1 class="col-12 text-center title mb-0 text-light">ECOWAVE</h1>
+		<h1 class="col-12 text-center title mb-0 text-light p-0">ECOWAVE</h1>
 		<h2 class="col-12 text-center normal text-light">#BALANCETONSPOT</h2>
 		
 		<div class="row justify-content-center m-0">
