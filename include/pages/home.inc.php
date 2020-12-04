@@ -11,7 +11,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 		<h2 class="col-12 text-center normal text-light">#BALANCETONSPOT</h2>
 		
 		<div class="row justify-content-center m-0">
-			<a class="button btn btn-primary mt-5 rounded-pill px-4 py-2" role="button"><?php echo getString("surf")?> !</a>
+			<a class="button btn btn-primary mt-5 rounded-pill px-4 py-2" href="?page=<?php echo EnumPages::Search ?>" role="button"><?php echo getString("surf")?> !</a>
 		</div>
 	</div>
 </div>
