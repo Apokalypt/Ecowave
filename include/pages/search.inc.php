@@ -62,8 +62,8 @@ if (!empty($_POST['pays'])) {
             <div class="spot-preview rounded w-100">
 				<?php if (isset($listSpot)) {
 					foreach ($listSpot as $value) { ?>
-						<div class="row spot-founded">
-							<div class="col-7 col-lg-4 mt-3"><h3><?php echo $value->getSpotName() ?>></h3></div>
+						<div class="row spot-founded" onclick="clickSpot(<?php echo $value->getSpotId() ?>)">
+							<div class="col-7 col-lg-4 mt-3"><h3><?php echo $value->getSpotName() ?></h3></div>
 							<div class="col-5 col-lg-2 my-1 mx-auto"><i class="cloudy"></i></div>
 							<div class="col-4 col-lg-2">
 								<h6 class="mx-auto mt-2">Marée</h6>
@@ -85,6 +85,10 @@ if (!empty($_POST['pays'])) {
     </div>
 </div>
 <script>
+	function clickSpot(id) {
+	    window.open("?page=spotdetails&id=" + id);
+	}
+	
     function filterSpot() {
         const input = document.getElementById('search_spot').value;
 
