@@ -48,6 +48,7 @@ i.cloudy {
     height: 4rem;
     background: url("../images/cloudy.svg");
     background-size: 4rem;
+    background-repeat: no-repeat;
 }
 i.search {
     display: block;
@@ -58,16 +59,51 @@ i.search {
 }
 i.arrow-right {
     display: block;
-    width: 1rem;
-    height: 1rem;
+    width: 4rem;
+    height: 4rem;
     background: url("../images/arrow-right.svg");
-    background-size: 1rem;
+    background-size: 4rem;
 }
 i.star {
     display: block;
     width: 1rem;
     height: 1rem;
     background: url("../images/star.svg");
+    background-size: 1rem;
+}
+i.personne1 {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/person-24px_1.svg");
+    background-size: 2rem;
+}
+i.personne2 {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/people-24px.svg");
+    background-size: 2rem;
+}
+i.personne3 {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/group_add-24px.svg");
+    background-size: 2rem;
+}
+i.beach {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/beach_access-24px.svg");
+    background-size: 2rem;
+}
+i.electric-scooter {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url("../images/electric_scooter-24px.svg");
     background-size: 1rem;
 }
 #menu a {
@@ -99,10 +135,31 @@ span {
     background-color: red;
 }
 
+.green{
+    background-color: #acee47;
+}
+
+.start{
+    padding:10%;
+}
+@media screen and (min-width: 700px){
+    .start{
+        padding:5%;
+    }
+}
+
+
 .stop {
     padding-top: 50%;
     transform: translateY(-27%);
     width: 50px;
+}
+
+.spot-details-panel {
+    max-height: 20rem;
+}
+aside.spot-details-panel {
+    overflow-y:scroll;
 }
 
 
