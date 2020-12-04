@@ -5,7 +5,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     exit();
 }
 
-if (!isConnected()) {
+if (isConnected()) {
     header('Location:?page=' . EnumPages::Connection . '&action=search');
     exit();
 }

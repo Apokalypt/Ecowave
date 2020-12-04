@@ -3,7 +3,12 @@
 if (session_status() !== PHP_SESSION_ACTIVE) {
     header('Location:../../?page=error404');
     exit();
-} ?>
+}
+$id = $_GET["id"];
+$manager = new SpotManager(new MyPDO());
+$sessionManager = new SessionManager(new MyPDO());
+$spot = $manager->getSpotById($id);
+?>
 
 <div class="d-flex h-100 background">
     <div class="col-sm-10 col-md-8 col-lg-6 m-auto pb-5 text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">
@@ -12,23 +17,32 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         <section class="my-4 d-inline-flex">
             <div class="bg-white spot-details-panel p-3 mr-3 w-100">
                 <div class="row">
-                    <h3 class="col-8">Lacanau plage </h3>
+                    <h3 class="col-8"><?php echo $spot->getSpotName(); ?> </h3>
                     <i class="cloudy col-4"></i>
                 </div>
                 <table class="mt-4">
                     <tr>
                         <td class="text-left"><h5>Qualité de l'eau</h5></td>
                         <td class="d-flex pl-5">
-                            <i class="star"></i>
-                            <i class="star"></i>
+                            <?php
+                                for ($i = 0; $i < $sessionManager->getNumberStarsSpotQualities($id)->getSessionQualityWater(); $i++) {
+                            ?>
+                                    <i class="star"></i>
+                            <?php
+                                }
+                            ?>
                         </td>
                     </tr>
                     <tr>
                         <td class="text-left"><h5>Qualité de Plage</h5></td>
                         <td class="d-flex pl-5">
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
+                            <?php
+                            for ($i = 0; $i < $sessionManager->getNumberStarsSpotQualities($id)->getSessionQualityBeach(); $i++) {
+                                ?>
+                                <i class="star"></i>
+                                <?php
+                            }
+                            ?>
                         </td>
                     </tr>
                     <tr>
@@ -46,26 +60,16 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 </table>
             </div>
             <aside class="w-75 spot-details-panel text-left d-none d-md-block">
-                <div class="bg-white p-2">
-                    <p>@titi-surf</p>
-                    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </div>
-                <div class="bg-white p-2 mt-2">
-                    <p>@titi-surf</p>
-                    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </div>
-                <div class="bg-white p-2 mt-2">
-                    <p>@titi-surf</p>
-                    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </div>
-                <div class="bg-white p-2 mt-2">
-                    <p>@titi-surf</p>
-                    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </div>
-                <div class="bg-white p-2 mt-2">
-                    <p>@titi-surf</p>
-                    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
-                </div>
+               <?php
+                    foreach ($sessionManager->getCommentary($id) as $comment) {
+               ?>
+                        <div class="bg-white p-2">
+                            <p><?php echo $comment->getUser() ?></p>
+                            <p><?php echo $comment->getSessionNotice() ?></p>
+                        </div>
+               <?php
+                    }
+               ?>
             </aside>
         </section>
         <a href="?page=session_count">
