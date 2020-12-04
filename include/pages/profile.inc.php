@@ -3,6 +3,11 @@
 if (session_status() !== PHP_SESSION_ACTIVE) {
     header('Location:../../?page=error404');
     exit();
+}
+
+if (!isConnected()) {
+	header('Location:?page=' . EnumPages::Connection . '&action=profil');
+	exit();
 } ?>
 <div class="d-flex h-100 background">
     <div class="col-sm-10 col-md-8 col-lg-6 m-auto text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">
