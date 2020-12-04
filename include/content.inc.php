@@ -14,6 +14,9 @@ switch ($page) {
     case EnumPages::Connection:
         include_once('pages/connection.inc.php');
         break;
+    case EnumPages::Register:
+        include('pages/register.inc.php');
+        break;
     case EnumPages::Error404:
         include_once ('pages/error404.inc.php');
         break;

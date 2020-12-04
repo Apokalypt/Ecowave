@@ -31,13 +31,13 @@
 }
 h2.title {
     font-family: title, serif;
-    font-size: 3em;
+    font-size: 4em;
     line-height: 1;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0;
 }
 
 @media screen and (max-width: 700px) {
-    .title {
+    h1.title {
         font-size: 4rem;
     }
 }

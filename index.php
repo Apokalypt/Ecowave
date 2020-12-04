@@ -71,8 +71,8 @@ if (!empty($_GET["page"])){
 	<!-- Footer -->
 	<footer class="wow fadeIn sticky-footer fixed-bottom" data-wow-duration="1.3s" data-wow-delay="0.4s">
 		<div class="container my-auto">
-			<div class="copyright text-center my-auto">
-				<span>Copyright 2020 &copy; LADRAT Mattéo — NGUYEN VAN GIAU Emma — ROUGIER Valentin — LAURENT Jean — PELAUDEIX Benjamin</span>
+			<div class="copyright text-center my-auto ">
+<!--				<span>Copyright 2020 &copy; LADRAT Mattéo — NGUYEN VAN GIAU Emma — ROUGIER Valentin — LAURENT Jean — PELAUDEIX Benjamin</span>-->
 			</div>
 		</div>
 	</footer>
