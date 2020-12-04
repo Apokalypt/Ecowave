@@ -14,7 +14,7 @@ if (!isConnected()) {
         <img src="images/Logo.png" alt="Logo" class="col-5 col-md-4">
         <h2 class="title mb-0 text-light">ECOWAVE</h2>
         <div class="rond m-auto"></div>
-        <h2 class="button text-light">Pseudo <span>(<a href="#" class="text display-6 text-light">Modifier profil</a>)</span></h2>
+        <h2 class="button text-light">Pseudo <span>(<a href="?page=modify-profile" class="text display-6 text-light">Modifier profil</a>)</span></h2>
         <h2 class="button text-light">Description</h2>
         <p class="text text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, eveniet iure molestiae qui sapiente vel veniam. Accusantium aliquam, aut eligendi, esse expedita fugit in ipsum itaque iure ullam unde vel.</p>
         <h2 class="button text-light">Dernier avis</h2>

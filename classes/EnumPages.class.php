@@ -5,4 +5,5 @@
     const Register = 'register';
     const Search = 'search';
     const Profile = 'profile';
+    const ModifyProfile = 'modify-profile';
 }

@@ -13,7 +13,7 @@ define('ENV','dev');
 define('DB_PORT', 3306);
 
 define('DB_HOST_DEV', "localhost");
-define('DB_HOST_PROD', "..........");
+define('DB_HOST_PROD', "dev");
 /**
  * This function return DB_HOST according to the environment
  *
