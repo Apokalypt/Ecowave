@@ -12,7 +12,7 @@ define('ENV','dev');
 
 define('DB_PORT', 3306);
 
-define('DB_HOST_DEV', "..........");
+define('DB_HOST_DEV', "localhost");
 define('DB_HOST_PROD', "..........");
 /**
  * This function return DB_HOST according to the environment
@@ -27,7 +27,7 @@ function getDBHost() {
     }
 }
 
-define('DB_NAME_DEV', "..........");
+define('DB_NAME_DEV', "mydb");
 define('DB_NAME_PROD', "..........");
 /**
  * This function return DB_NAME according to the environment
@@ -42,8 +42,8 @@ function getDBName() {
     }
 }
 
-define('DB_USER', "..........");
-define('DB_PASSWD', "..........");
+define('DB_USER', "root");
+define('DB_PASSWD', "");
 
 
 // Salt for password :)
