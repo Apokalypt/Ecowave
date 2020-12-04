@@ -10,8 +10,6 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 
 <nav class="navbar navbar-expand-lg w-100 navbar-dark bg-transparent fixed-top justify-content-end">
-
-
 	<!--
 	<div class="btn-group" >
 		<button type="button" class="btn btn-secondary bg-transparent border-0 dropdown-toggle shadow-none" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

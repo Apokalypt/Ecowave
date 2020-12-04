@@ -31,7 +31,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 			</p>
 		</div>
 
-		<div class="d-flex flex-row-reverse flex-wrap mt-5 wow bounceInRight">
+		<div class="d-flex flex-row-reverse flex-wrap mt-5 wow bounceInRight p-3">
 			<img class="col-md-4 col-12 p-0" src="images/surfer2.jpg">
 			<p class="mr-0 mr-md-3 col-md col-12 p-0" style="font-family: 'Lucida Sans',serif">
 				Ecowave est une application de Surfrider qui accompagne les surfeur·euse·s dans leur pratique de leur

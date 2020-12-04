@@ -36,6 +36,20 @@ h2.title {
     letter-spacing: 0;
 }
 
+#menu {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100vw;
+}
+
+#menu a {
+    padding: 0 35px;
+}
+
+
+
+
 @media screen and (max-width: 700px) {
     h1.title {
         font-size: 4rem;

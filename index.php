@@ -68,6 +68,8 @@ if (!empty($_GET["page"])){
 
 	<?php require_once("include/content.inc.php"); ?>
 
+    <?php require_once("include/mobile-nav.inc.php"); ?>
+
 	<!-- Footer -->
 	<footer class="wow fadeIn sticky-footer fixed-bottom" data-wow-duration="1.3s" data-wow-delay="0.4s">
 		<div class="container my-auto">
