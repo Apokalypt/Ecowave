@@ -3,6 +3,39 @@
 if (session_status() !== PHP_SESSION_ACTIVE) {
     header('Location:../../?page=error404');
     exit();
+}
+
+if (isConnected()) {
+	// Reset value for connection.
+    $_SESSION['user_mail'] = '';
+    $_SESSION['user_password'] = '';
+    // User is now disconnected...
+	
+    header('Location:?page=' . EnumPages::Home);
+    exit();
+} else {
+	if (empty($_GET['action'])) {
+        $_GET['action'] = 'home';
+	}
+	
+	if (!oneIsEmpty($_GET, 'passwd', 'email')) {
+		if ((new UserManager(new MyPDO()))->connect($_GET['email'], encryptStringNoDecrypt($_GET['passwd']))) {
+            $_SESSION['user_mail'] = $_GET['email'];
+            $_SESSION['user_password'] = $_GET['passwd'];
+			
+            switch ($_GET['action']) {
+                case 'surf' :
+                    header('Location:?page=' . EnumPages::Search);
+                    exit();
+                case 'profil' :
+                    header('Location:?page=' . EnumPages::Profile);
+                    exit();
+                default :
+                    header('Location:?page=' . EnumPages::Home);
+                    exit();
+            }
+		}
+	}
 } ?>
 
 <div class="d-flex h-100 background">
