@@ -3,6 +3,11 @@
 if (session_status() !== PHP_SESSION_ACTIVE) {
     header('Location:../../?page=error404');
     exit();
+}
+
+if (!isConnected()) {
+    header('Location:?page=' . EnumPages::Connection . '&action=search');
+    exit();
 } ?>
 
 <div class="d-flex h-100 background">
