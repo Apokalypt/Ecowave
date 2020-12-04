@@ -19,7 +19,7 @@ if (isConnected()) {
             $_SESSION['user_password'] = $_GET['password'];
         
             switch ($_GET['action']) {
-                case 'surf' :
+                case 'search' :
                     header('Location:?page=' . EnumPages::Search);
                     exit();
                 case 'profil' :
@@ -56,7 +56,7 @@ if (isConnected()) {
             <div class="col-8 mx-auto mt-4">
                 <input value="Nous rejoindre" class="button w-100 rounded-pill" type="submit" name="connexion" id="connexion">
             </div>
-            <a href="index.php?page=connection" class="button text-dark">ou connecte-toi ici</a>
+            <a href="?page=<?php echo EnumPages::Connection . "&action=" . $_GET['action'] ?>" class="button text-dark">ou connecte-toi ici</a>
         </form>
     </div>
 </div>
