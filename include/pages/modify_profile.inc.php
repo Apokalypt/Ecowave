@@ -61,11 +61,11 @@ if (!isConnected()) {
 					<input type="text" required name="email" id="email" class="w-100 rounded-pill" value="<?php echo $account->getUserMail()?>">
 				</div>
 				<div class="col-8 mx-auto mt-3">
-					<label for="mdp" class="button display-5 text-light">Mot de passe</label>
+					<label for="mdp" class="button display-5 text-light"><?php echo getString("password")?></label>
 					<input type="password" required name="mdp" id="mdp" class="w-100 rounded-pill">
 				</div>
 				<div class="col-8 mx-auto mt-3">
-					<label for="mdp_confirm" class="button display-5 text-light">Confirmation mot de passe</label>
+					<label for="mdp_confirm" class="button display-5 text-light"><?php echo getString("confirmPassword")?></label>
 					<input type="password" required name="mdp_confirm" id="mdp_confirm" class="w-100 rounded-pill">
 				</div>
 				<div class="col-8 mx-auto mt-3">
@@ -73,7 +73,7 @@ if (!isConnected()) {
 					<input type="text" name="description" id="description" class="w-100 rounded-pill" value="<?php echo $account->getUserBiography()?>">
 				</div>
 				<div class="col-8 mx-auto mt-4">
-					<input value="Mettre à jour" class="button w-100 rounded-pill" type="submit" name="connexion" id="connexion">
+					<input value="<?php echo getString("update")?>" class="button w-100 rounded-pill" type="submit" name="connexion" id="connexion">
 				</div>
 			</form>
 		</div>
