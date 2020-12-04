@@ -1,7 +1,7 @@
 <?php
 
 
-class Session extends Object {
+class Session {
     private $session_id;
     private $user;
     private $session_activity;
@@ -15,9 +15,17 @@ class Session extends Object {
     private $session_visit_boat;
     private $spot;
     
+    
     /**
-     * @inheritDoc
+     * User constructor.
+     * @param array $data
      */
+    public function __construct($data = array()) {
+        if (!empty($data))
+            $this->affects($data);
+    }
+    
+    
     protected function affects(array $data) {
         foreach ($data as $key => $value) {
             switch ($key) {

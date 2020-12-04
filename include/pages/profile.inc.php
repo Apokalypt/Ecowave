@@ -8,6 +8,9 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 if (!isConnected()) {
 	header('Location:?page=' . EnumPages::Connection . '&action=profil');
 	exit();
+} else if (empty($_GET['id'])) {
+    header('Location:?page=' . EnumPages::Home);
+    exit();
 }
 
 /** @var User $account */?>
@@ -16,7 +19,7 @@ if (!isConnected()) {
         <img src="images/Logo.png" alt="Logo" class="col-5 col-md-4">
         <h2 class="title mb-0 text-light">ECOWAVE</h2>
         <div class="rond m-auto"></div>
-        <h2 class="button text-light"><?php echo $account->getUserPseudo() == '' ?  '<i>Aucun pseudo</i>' : '<az>' . $account->getUserPseudo() . '</az>' ?> <span>(<a href="#" class="text display-6 text-light">Modifier profil</a>)</span></h2>
+        <h2 class="button text-light"><?php echo $account->getUserPseudo() == '' ?  '<az>' . $account->getUserMail() . '</az>' : '<az>' . $account->getUserPseudo() . '</az>' ?> <span>(<a href="#" class="text display-6 text-light">Modifier profil</a>)</span></h2>
         <h2 class="button text-light">Description</h2>
         <p class="text text-light"><?php echo $account->getUserBiography() == '' ?  '<i>Aucune description</i>' : '<az>' . $account->getUserBiography() . '</az>' ?></p>
         <!--

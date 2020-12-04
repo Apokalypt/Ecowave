@@ -1,14 +1,24 @@
 <?php
 
 
-class Region extends Object {
+class Region {
     private $region_id;
     private $region_name;
     private $country;
     
+    
+    
     /**
-     * @inheritDoc
+     * User constructor.
+     * @param array $data
      */
+    public function __construct($data = array()) {
+        if (!empty($data))
+            $this->affects($data);
+    }
+    
+
+    
     protected function affects(array $data) {
         foreach ($data as $key => $value) {
             switch ($key) {

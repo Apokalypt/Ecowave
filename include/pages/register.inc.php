@@ -13,10 +13,10 @@ if (isConnected()) {
         $_GET['action'] = 'home';
     }
     
-    if (!oneIsEmpty($_GET, 'password', 'email') && isEmail($_GET['email'])) {
-    	if ((new UserManager(new MyPDO()))->addUser($_GET['email'], encryptStringNoDecrypt($_GET['password']))) {
-            $_SESSION['user_mail'] = $_GET['email'];
-            $_SESSION['user_password'] = $_GET['password'];
+    if (!oneIsEmpty($_POST, 'mdp', 'mdp_confirm', 'email', 'pseudo') && isEmail($_POST['email']) && $_POST['mdp'] === $_POST['mdp_confirm']) {
+    	if ((new UserManager(new MyPDO()))->addUser($_POST['email'], encryptStringNoDecrypt($_POST['mdp']), $_POST['pseudo'])) {
+            $_SESSION['user_mail'] = $_POST['email'];
+            $_SESSION['user_password'] = $_POST['mdp'];
         
             switch ($_GET['action']) {
                 case 'search' :

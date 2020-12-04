@@ -1,7 +1,7 @@
 <?php
 
 
-class Spot extends Object {
+class Spot {
     private $spot_id;
     private $spot_city;
     private $spot_details;
@@ -10,9 +10,19 @@ class Spot extends Object {
     private $region;
     private $user;
     
+    
+    
     /**
-     * @inheritDoc
+     * User constructor.
+     * @param array $data
      */
+    public function __construct($data = array()) {
+        if (!empty($data))
+            $this->affects($data);
+    }
+    
+    
+    
     protected function affects(array $data) {
         foreach ($data as $key => $value) {
             switch ($key) {

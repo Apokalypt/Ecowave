@@ -1,14 +1,23 @@
 <?php
 
 
-class Department extends Object {
+class Department {
     private $department_id;
     private $department_name;
     private $country;
     
+    
+    
     /**
-     * @inheritDoc
+     * User constructor.
+     * @param array $data
      */
+    public function __construct($data = array()) {
+        if (!empty($data))
+            $this->affects($data);
+    }
+    
+    
     protected function affects(array $data) {
         foreach ($data as $key => $value) {
             switch ($key) {

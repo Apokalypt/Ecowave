@@ -1,18 +1,23 @@
 <?php
 
 
-class User extends Object {
+class User  {
     private $user_id;
     private $user_pseudo;
     private $user_picture;
-    private $country;
     private $user_biography;
     private $user_mail;
     private $user_password;
     
     /**
-     * @inheritDoc
+     * User constructor.
+     * @param array $data
      */
+    public function __construct($data = array()) {
+        if (!empty($data))
+            $this->affects($data);
+    }
+    
     protected function affects(array $data) {
         foreach ($data as $key => $value) {
             switch ($key) {
@@ -24,12 +29,6 @@ class User extends Object {
                     break;
                 case 'user_picture' :
                     $this->user_picture = $value;
-                    break;
-                case 'country' :
-                    $this->country = $value;
-                    break;
-                case 'country_data' :
-                    $this->country = new Country($value);
                     break;
                 case 'user_biography' :
                     $this->user_biography = $value;
@@ -84,19 +83,6 @@ class User extends Object {
      */
     public function setUserPicture($user_picture) {
         $this->user_picture = $user_picture;
-    }
-    
-    /**
-     * @return mixed
-     */
-    public function getCountry() {
-        return $this->country;
-    }
-    /**
-     * @param mixed $country
-     */
-    public function setCountry($country) {
-        $this->country = $country;
     }
     
     /**

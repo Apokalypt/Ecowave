@@ -18,10 +18,10 @@ if (isConnected()) {
         $_GET['action'] = 'home';
 	}
 	
-	if (!oneIsEmpty($_GET, 'password', 'email')) {
-		if ((new UserManager(new MyPDO()))->connect($_GET['email'], encryptStringNoDecrypt($_GET['password']))) {
-            $_SESSION['user_mail'] = $_GET['email'];
-            $_SESSION['user_password'] = $_GET['password'];
+	if (!oneIsEmpty($_POST, 'password', 'email')) {
+		if ((new UserManager(new MyPDO()))->connect($_POST['email'], encryptStringNoDecrypt($_POST['password']))) {
+            $_SESSION['user_mail'] = $_POST['email'];
+            $_SESSION['user_password'] = $_POST['password'];
 			
             switch ($_GET['action']) {
                 case 'search' :
