@@ -3,7 +3,7 @@
 This repository contains all resources for the **2020 edition** of the "Nuit de l'info" of the **Eye-Team**
 
 ## General information
-The app is available online at : http://146.59.248.50/
+This app has been developed for the 2020 edition of the "Nuit de l'info" a french national contest during which students teams from several french school compete to complete the challenges that are given to them. The event particularity is that it last almost 16 hours, the goal then for the contestants is to work on their app non-stop from Thursday 16pm to Friday 8am (no sleep, no rest until work is done and complete :wink:)
 
 ## How to use the app
 ###Languages
